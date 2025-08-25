@@ -290,7 +290,7 @@ Place images in `frontend/assets/screenshots/` or `docs/images/` and reference t
 
 | Screen           | File                                                |
 | ---------------- | --------------------------------------------------- |
-| Home (Dashboard) | `frontend/assets/Screenshot_185634.png` |
+| Home (Dashboard) | `frontend/assets/Screenshot 2025-08-25 185634.png` |
 | Payments         | `frontend/assets/Screenshot_185655.png` |
 | History          | `frontend/assets/Screenshot_185713.png` |
 | Statistics       | `frontend/assets/Screenshot_185926.png` |
