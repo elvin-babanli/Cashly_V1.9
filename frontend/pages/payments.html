@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Payments - Cashly</title>
+  <link rel="stylesheet" href="../styles/payments.css" />
+
+  <!-- Token yoxlaması -->
+  <script>
+    const token = localStorage.getItem("token");
+    if (!token) {
+      window.location.href = "login.html";
+    }
+  </script>
+</head>
+<body>
+  <div class="payments-main-container">
+    <div class="payments-card">
+      <div class="topbar" style="display: flex; justify-content: space-between; align-items: center;">
+        <h1><span class="icon">💳</span> Make a Payment</h1>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <a href="home.html" class="back-btn">← Back to Home</a>
+          <button id="logoutBtn" style="padding: 5px 12px; background: crimson; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Logout
+          </button>
+        </div>
+      </div>
+
+      <div class="card">
+        <form id="paymentForm">
+          <label for="method">Payment Method:</label>
+          <select id="method" required>
+            <option value="Blik">Blik</option>
+            <option value="Bank Transfer">Bank Transfer</option>
+            <option value="ZUS Transfer">ZUS Transfer</option>
+            <option value="Tax Payment">Tax Payment</option>
+            <option value="Phone Top-up">Phone Top-up</option>
+          </select>
+
+          <label for="desc">Description:</label>
+          <input type="text" id="desc" placeholder="E.g. Internet bill" required />
+
+          <label for="amount">Amount ($):</label>
+          <input type="number" id="amount" placeholder="E.g. 200" step="0.01" required />
+
+          <label for="date">Date:</label>
+          <input type="date" id="date" required />
+
+          <button type="submit">Pay</button>
+        </form>
+        <p id="message"></p>
+      </div>
+    </div>
+
+    <footer class="footer">© 2025 Cashly. All rights reserved.</footer>
+  </div>
+
+  <!-- Logout funksiyası -->
+  <script>
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      localStorage.removeItem("token");
+      window.location.href = "login.html";
+    });
+  </script>
+
+  <script src="../scripts/payments.js"></script>
+</body>
+</html>

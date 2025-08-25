@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign Up - Cashly</title>
+  <link rel="stylesheet" href="../styles/register.css" />
+</head>
+<body>
+  <div class="register-main-container">
+    <div class="register-card">
+      <h2><span class="icon">📝</span> Create Your Account</h2>
+      <form id="registerForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required autocomplete="new-password">
+
+        <button type="submit">Sign Up</button>
+        <p id="message"></p>
+      </form>
+      <div class="link">
+        Already have an account? <a href="login.html">Log in</a>
+      </div>
+    </div>
+    <footer class="footer">© 2025 Cashly. All rights reserved.</footer>
+  </div>
+  <script src="../scripts/register.js"></script>
+</body>
+</html>

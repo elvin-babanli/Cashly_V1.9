@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #e0e7ef 0%, #f5f7fa 100%);
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.add-main-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: none;
+}
+
+.add-card {
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(60, 60, 120, 0.12), 0 1.5px 6px rgba(0,0,0,0.04);
+  border-radius: 22px;
+  padding: 36px 32px 24px 32px;
+  margin-top: 48px;
+  width: 100%;
+  max-width: 500px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.topbar h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #1a2a3a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 2.2rem;
+}
+
+.back-btn {
+  color: #3a8dde;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 8px 18px;
+  border-radius: 8px;
+  background: #f0f6ff;
+  transition: background 0.2s, color 0.2s;
+  border: 1px solid #e0e7ef;
+}
+
+.back-btn:hover {
+  background: #3a8dde;
+  color: #fff;
+}
+
+.card {
+  background: #f7faff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(60, 60, 120, 0.07);
+  padding: 18px 12px 12px 12px;
+  margin-bottom: 24px;
+}
+
+.card h2 {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  color: #3a8dde;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="date"] {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1.5px solid #e0e7ef;
+  background-color: #fff;
+  color: #222;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+input:focus {
+  border: 1.5px solid #3a8dde;
+  outline: none;
+}
+
+button {
+  padding: 10px 0;
+  background: linear-gradient(90deg, #ff5e62 0%, #ff9966 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(255, 94, 98, 0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ff9966 0%, #ff5e62 100%);
+  box-shadow: 0 4px 16px rgba(255, 94, 98, 0.16);
+}
+
+.footer {
+  margin-top: 48px;
+  color: #b0b8c1;
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 24px;
+}
+
+@media (max-width: 600px) {
+  .add-card {
+    padding: 16px 4px 12px 4px;
+    margin-top: 16px;
+    min-width: unset;
+  }
+  .topbar h1 {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Statistics - Cashly</title>
+  <link rel="stylesheet" href="../styles/statistics.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Token yoxlaması -->
+  <script>
+    const token = localStorage.getItem("token");
+    if (!token) {
+      window.location.href = "login.html";
+    }
+  </script>
+</head>
+<body>
+  <div class="statistics-main-container">
+    <div class="statistics-card">
+      <div class="topbar" style="display: flex; justify-content: space-between; align-items: center;">
+        <h1><span class="icon">📊</span> Financial Statistics</h1>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <a href="home.html" class="back-btn">← Back to Home</a>
+          <button id="logoutBtn" style="padding: 5px 12px; background: crimson; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Logout
+          </button>
+        </div>
+      </div>
+
+      <div class="period-selector">
+        <label for="period">Period:</label>
+        <select id="period">
+          <option value="daily">Daily</option>
+          <option value="weekly" selected>Weekly</option>
+          <option value="monthly">Monthly</option>
+          <option value="yearly">Yearly</option>
+        </select>
+      </div>
+
+      <p id="stats-error"></p>
+
+      <div class="charts">
+        <div class="chart-card">
+          <h4>Income & Expenses Over Time</h4>
+          <canvas id="barChart" width="400" height="300"></canvas>
+        </div>
+        <div class="chart-card">
+          <h4>Spending Breakdown</h4>
+          <canvas id="pieChart" width="400" height="300"></canvas>
+        </div>
+      </div>
+
+      <div class="table-section">
+        <h3>Transaction Summary</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Total ($)</th>
+            </tr>
+          </thead>
+          <tbody id="summaryTable">
+            <!-- JavaScript ilə doldurulacaq -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer class="footer">© 2025 Cashly. All rights reserved.</footer>
+  </div>
+
+  <!-- Logout funksiyası -->
+  <script>
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      localStorage.removeItem("token");
+      window.location.href = "login.html";
+    });
+  </script>
+
+  <script src="../scripts/statistics.js"></script>
+</body>
+</html>

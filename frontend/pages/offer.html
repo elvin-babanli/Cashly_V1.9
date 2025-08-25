@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Offers - Cashly</title>
+</head>
+<body>
+  <h2>Special Offers</h2>
+  <p>Stay tuned! New features are coming soon.</p>
+
+  <button onclick="goBack()">← Back to Home</button>
+  <button onclick="logout()">Logout</button>
+
+  <script>
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (!user) window.location.href = "login.html";
+
+    function goBack() {
+      window.location.href = "home.html";
+    }
+
+    function logout() {
+      localStorage.removeItem("user");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

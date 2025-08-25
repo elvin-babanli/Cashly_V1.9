@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Transaction History - Cashly</title>
+  <link rel="stylesheet" href="../styles/history.css" />
+
+  <!-- Token yoxlaması -->
+  <script>
+    const token = localStorage.getItem("token");
+    if (!token) {
+      window.location.href = "login.html";
+    }
+  </script>
+</head>
+<body>
+  <div class="history-main-container">
+    <div class="history-card">
+      <div class="topbar" style="display: flex; justify-content: space-between; align-items: center;">
+        <h1><span class="icon">📜</span> Transaction History</h1>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <a href="home.html" class="back-btn">← Back to Home</a>
+          <button id="logoutBtn" style="padding: 5px 12px; background: crimson; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Logout
+          </button>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table id="historyTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Amount ($)</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="message"></p>
+      </div>
+    </div>
+
+    <footer class="footer">© 2025 Cashly. All rights reserved.</footer>
+  </div>
+
+  <!-- Logout funksiyası -->
+  <script>
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      localStorage.removeItem("token");
+      window.location.href = "login.html";
+    });
+  </script>
+
+  <script src="../scripts/history.js"></script>
+</body>
+</html>

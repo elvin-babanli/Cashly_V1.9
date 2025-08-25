@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home - Cashly</title>
+  <link rel="stylesheet" href="../styles/home.css" />
+
+  <!-- Token yoxlaması -->
+  <script>
+    const token = localStorage.getItem("token");
+    if (!token) {
+      window.location.href = "login.html";
+    }
+  </script>
+</head>
+<body>
+  <div class="home-main-container">
+    <div class="home-card animated-card">
+      <div class="topbar">
+        <h1 class="animated-welcome">Welcome to <span class="logo">Cashly</span></h1>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+      </div>
+      <div class="subtitle">Your smart, beautiful finance dashboard</div>
+
+      <div class="card user-info">
+        <h2>Hello, <span id="username">User</span>!</h2>
+        <p>Current Balance: <span id="balance" class="animated-balance">$0.00</span></p>
+      </div>
+
+      <div class="nav">
+        <button onclick="goTo('add')">➕ Add Details</button>
+        <button onclick="goTo('payments')">💳 Payments</button>
+        <button onclick="goTo('history')">📜 History</button>
+        <button onclick="goTo('statistics')">📊 Statistics</button>
+      </div>
+    </div>
+    <footer class="footer">© 2025 Cashly. All rights reserved.</footer>
+  </div>
+
+  <script src="../scripts/home.js"></script>
+
+  <!-- Logout funksiyası -->
+  <script>
+    function logout() {
+      localStorage.removeItem("token");
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <!-- Animated balance scripti -->
+  <script>
+    function animateBalance(finalValue) {
+      const el = document.getElementById('balance');
+      if (!el) return;
+      let start = 0;
+      const end = parseFloat(finalValue.replace(/[^\d.\-]/g, ''));
+      const duration = 1200;
+      const startTime = performance.now();
+      function update(now) {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const value = start + (end - start) * progress;
+        el.textContent = `$${value.toFixed(2)}`;
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    }
+
+    const origSet = Object.getOwnPropertyDescriptor(window, 'onload');
+    window.onload = function () {
+      setTimeout(() => {
+        const bal = document.getElementById('balance');
+        if (bal) animateBalance(bal.textContent);
+      }, 400);
+      if (origSet && origSet.value) origSet.value();
+    };
+  </script>
+</body>
+</html>
