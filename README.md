@@ -290,14 +290,14 @@ Place images in `frontend/assets/screenshots/` or `docs/images/` and reference t
 
 | Screen           | File                                                |
 | ---------------- | --------------------------------------------------- |
-| Home (Dashboard) | `frontend/assets/Screenshot 2025-08-25 185634.png` |
-| Payments         | `frontend/assets/Screenshot_185655.png` |
-| History          | `frontend/assets/Screenshot_185713.png` |
-| Statistics       | `frontend/assets/Screenshot_185926.png` |
-| Settings         | `frontend/assets/Screenshot_185940.png` |
-| Help / FAQ       | `frontend/assets/Screenshot_185954.png` |
-| Admin Panel      | `frontend/assets/Screenshot_190013.png` |
-| Intro / Login    | `frontend/assets/Screenshot_190028.png` |
+| Home (Dashboard) | `frontend/assets/screenshots/Screenshot_185634.png` |
+| Payments         | `frontend/assets/screenshots/Screenshot_185655.png` |
+| History          | `frontend/assets/screenshots/Screenshot_185713.png` |
+| Statistics       | `frontend/assets/screenshots/Screenshot_185926.png` |
+| Settings         | `frontend/assets/screenshots/Screenshot_185940.png` |
+| Help / FAQ       | `frontend/assets/screenshots/Screenshot_185954.png` |
+| Admin Panel      | `frontend/assets/screenshots/Screenshot_190013.png` |
+| Intro / Login    | `frontend/assets/screenshots/Screenshot_190028.png` |
 
 Markdown usage:
 
