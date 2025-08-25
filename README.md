@@ -286,7 +286,7 @@ When user submits a payment with method/description/amount/date:
 
 ## Screenshots
 
-Place images in `frontend/assets/screenshots/` or `docs/images/` and reference them here. Example:
+
 
 | Screen           | File                                                |
 | ---------------- | --------------------------------------------------- |
