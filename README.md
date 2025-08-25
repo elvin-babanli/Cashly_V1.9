@@ -290,7 +290,7 @@ When user submits a payment with method/description/amount/date:
 
 | Screen           | File                                                |
 | ---------------- | --------------------------------------------------- |
-| Home (Dashboard) | `frontend/assets/screenshots/home.png` |
+| Home (Dashboard) | `frontend/assets/screenshots/https://github.com/elvin-babanli/Cashly_V1.9/blob/main/frontend/assets/screenshots/home.png` |
 | Payments         | `frontend/assets/screenshots/payments.png` |
 | History          | `frontend/assets/screenshots/history.png` |
 | Statistics       | `frontend/assets/screenshots/statistics.png` |
