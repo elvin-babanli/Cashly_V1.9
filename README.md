@@ -297,7 +297,7 @@ When user submits a payment with method/description/amount/date:
 | Settings         | `frontend/assets/screenshots/settings.png` |
 | Sign / FAQ       | `frontend/assets/screenshots/sign.png` |
 | Admin Panel      | `frontend/assets/screenshots/admin.png` |
-| Intro / Login    | `frontend/assets/screenshots/login.png.png` |
+| Intro / Login    | `frontend/assets/screenshots/login.png` |
 
 Markdown usage:
 
